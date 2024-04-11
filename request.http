@@ -1,0 +1,82 @@
+###
+POST http://localhost:9000/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "perroooo",
+    "age": "25",
+    "email": "zorra12@gmail.com"
+}
+
+###
+GET http://localhost:9000/api/users HTTP/1.1
+
+###
+GET http://localhost:9000/api/users/65fb3cef94e70a4db8ce8ea5 HTTP/1.1
+
+###
+PUT http://localhost:9000/api/users/65fb3cef94e70a4db8ce8ea5 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "zorritaaaaaaaa",
+    "age": "15",
+    "email": "zorra12@gmail.com"
+}
+
+###
+DELETE http://localhost:9000/api/users/65fb3cef94e70a4db8ce8ea5 HTTP/1.1
+
+
+### Actualizar temperatura por ID (PUT)
+PUT http://localhost:9000/api/temperaturas/65f9daac114be90c596d8606 HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_temp": 1,
+    "temperatura": 600,
+    "id_usuario": 1
+}
+
+### Actualizar luminocidad por ID (PUT)
+PUT http://localhost:9000/api/luminosidad/6600f1d320935a66d042670e
+Content-Type: application/json
+
+{
+    "id_luz": 17,
+    "luminosidad": "LED 1",
+    "id_usuario": 2
+}
+
+
+### Actualizar Humedad por ID (PUT)
+PUT http://localhost:9000/api/humedad/6600f5b203fdf72c934e6acf HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_hum": 55,
+    "humedad": 90,
+    "id_usuario": 1
+}
+
+### Insertar en luminosidad 
+POST http://localhost:9000/api/luminosidad
+Content-Type: application/json
+
+{
+    "id_luz": 2,
+    "luminosidad": "no",
+    "fecha_hora": "2024-03-24T12:00:00.000Z",
+    "id_usuario": 1
+}
+
+### insertar en humedad 
+POST http://localhost:9000/api/humedad
+Content-Type: application/json
+
+{
+    "id_hum": 9,
+    "humedad": 80,
+    "fecha_hora": "2024-03-24T12:00:00.000Z",
+    "id_usuario": 1
+}
